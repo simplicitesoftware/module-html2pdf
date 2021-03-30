@@ -274,18 +274,23 @@ paths:
         type: boolean
         required: false
       - in: query
-        name: h2pWkUrl
-        description: Search filter for Url
-        type: string
-        required: false
-      - in: query
         name: h2pWkHtml
         description: Search filter for Html
         type: string
         required: false
       - in: query
+        name: h2pWkUrl
+        description: Search filter for wkhtml2pdf Url
+        type: string
+        required: false
+      - in: query
         name: h2pWkFile
-        description: Search filter for File
+        description: Search filter for wkhtml2pdf File
+        type: string
+        required: false
+      - in: query
+        name: h2pWkTool
+        description: Search filter for Tool File
         type: string
         required: false
       tags:
@@ -328,14 +333,17 @@ definitions:
   H2fWkhtml2pdf:
     type: object
     properties:
+      h2pWkTool:
+        description: Tool File
+        type: object
       h2pWkHtml:
         description: Html
         type: string
       h2pWkUrl:
-        description: Url
+        description: wkhtml2pdf Url
         type: string
       h2pWkFile:
-        description: File
+        description: wkhtml2pdf File
         type: object
       row_id:
         description: Unique technical row ID
